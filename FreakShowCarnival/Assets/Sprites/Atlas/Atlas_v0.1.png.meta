@@ -11,6 +11,9 @@ TextureImporter:
   - first:
       213: 2153997651745648844
     second: Atlas_ObstaculoRecto
+  - first:
+      213: -3654511374824743981
+    second: Atlas_pelota
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -166,6 +169,27 @@ TextureImporter:
       bones: []
       spriteID: cc0335fa37984ed10800000000000000
       internalID: 2153997651745648844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas_pelota
+      rect:
+        serializedVersion: 2
+        x: 1099
+        y: 1048
+        width: 247
+        height: 248
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3db52fb5441984dc0800000000000000
+      internalID: -3654511374824743981
       vertices: []
       indices: 
       edges: []
