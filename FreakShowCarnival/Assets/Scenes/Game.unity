@@ -1674,6 +1674,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Atlas_pelota
       objectReference: {fileID: 0}
+    - target: {fileID: 5216397295228448451, guid: 48b090d3fcebc2846b390bbb9b304515,
+        type: 3}
+      propertyPath: m_GravityScale
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 7117688330882229585, guid: 48b090d3fcebc2846b390bbb9b304515,
         type: 3}
       propertyPath: m_SortingLayerID
@@ -1755,6 +1760,28 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7a5b82810f2354249a3977cf509c8889, type: 3}
+--- !u!1 &854780909 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4286160053417804312, guid: 48b090d3fcebc2846b390bbb9b304515,
+    type: 3}
+  m_PrefabInstance: {fileID: 810468900}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &854780914
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 854780909}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f658a166c5e72447b5e5b08a8ec1665, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1
+  ballRb: {fileID: 0}
+  ballGO: {fileID: 0}
+  cam: {fileID: 0}
 --- !u!1 &860578383
 GameObject:
   m_ObjectHideFlags: 0
@@ -2438,8 +2465,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1059300344}
-  - {fileID: 532384526}
   - {fileID: 1192557430}
+  - {fileID: 532384526}
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
