@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Seccion
+  - 300
+  - PickUp
   layers:
   - Default
   - TransparentFX

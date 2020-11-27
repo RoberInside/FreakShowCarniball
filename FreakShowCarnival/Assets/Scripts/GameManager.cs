@@ -1,14 +1,23 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
+    public Text scoreText;
+    public int puntuacion;
+
     public Transform seccionInicialTF;
     public GameObject[] contenedorObstaculosArray;
+   
     // Start is called before the first frame update
     void Start()
     {
+        
+        scoreText = GameObject.Find("ScoreText").GetComponent<Text>();
+        
+        SetScoreText();
         GameStart();
     }
 
@@ -19,6 +28,7 @@ public class GameManager : MonoBehaviour
     }
     void GameStart()
     {
+        puntuacion = 0;
         seccionInicialTF =GetComponent<Transform>(); //Creamos una seccion inicial y usamos su posicion como referencia.
         FindSeccion(); //Encuentra las secciones
     }
@@ -46,5 +56,11 @@ public class GameManager : MonoBehaviour
         }
         
 
+    }
+   
+
+    public void SetScoreText()
+    {
+        scoreText.text = "Score: " + puntuacion.ToString();
     }
 }

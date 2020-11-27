@@ -8,11 +8,13 @@ public class BallController : MonoBehaviour
 
     public Rigidbody2D ballRb;
     public GameObject ballGO;
+    public GameManager gameManagerSC;
     public Camera cam;
 
     // Start is called before the first frame update
     void Start()
     {
+        gameManagerSC = FindObjectOfType<GameManager>();
         ballRb = GetComponent<Rigidbody2D>();
         ballGO = GameObject.Find("Atlas_pelota");
         cam = GameObject.Find("Main Camera").GetComponent<Camera>();
@@ -30,5 +32,16 @@ public class BallController : MonoBehaviour
     {
         Vector2 movement = new Vector3(axis, 0.0f);
         ballRb.AddForce( movement * speed);
+    }
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("PickUp"))
+        {
+            other.gameObject.SetActive(false);
+            gameManagerSC.puntuacion += other.gameObject.GetComponent<PickUp>().value;
+            gameManagerSC.SetScoreText();
+
+        }
+
     }
 }
