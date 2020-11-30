@@ -1704,10 +1704,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f658a166c5e72447b5e5b08a8ec1665, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.5
+  speed: 1
   ballRb: {fileID: 0}
   ballGO: {fileID: 0}
+  gameManagerSC: {fileID: 0}
   cam: {fileID: 0}
+  gyroActive: 1
 --- !u!1 &860578383
 GameObject:
   m_ObjectHideFlags: 0
@@ -3797,7 +3799,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  pickUpSC: {fileID: 0}
 --- !u!1 &2109810449
 GameObject:
   m_ObjectHideFlags: 0
