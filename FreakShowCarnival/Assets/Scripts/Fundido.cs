@@ -7,23 +7,24 @@ using UnityEngine.SceneManagement;
 public class Fundido : MonoBehaviour
 {
     public Image fundido;
-    public string[] scenes;
+    //public string[] scenes;
     // Start is called before the first frame update
     void Start()
     {
         fundido = GetComponent<Image>();
-        fundido.CrossFadeAlpha(0, 0.5f, false);
+        fundido.CrossFadeAlpha(0, 0.5f, false);     
     }
 
-    public void FadeOut(int sceneIndex)
+    public void FadeOut()
     {
         fundido.CrossFadeAlpha(1, 0.5f, false);
-        StartCoroutine(ChangeScene(scenes[sceneIndex]));
+        StartCoroutine(ChangeScene());
+        //(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
-    IEnumerator ChangeScene(string scene)
+    IEnumerator ChangeScene()
     {
         yield return new WaitForSeconds(1);
-        SceneManager.LoadScene(scene);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }

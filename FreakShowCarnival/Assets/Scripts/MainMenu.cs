@@ -8,33 +8,43 @@ using UnityEngine.Animations;
 public class MainMenu : MonoBehaviour
 {
     public MainMenu menu;
-    public Animator cortDcha;
-    public Animator cortIzda;
+    public Button playB;
+    public Button optionsB;
+    public Button quitB;
+
+    public Fundido fadeSC;
     public Animator cartel;
-    public AnimationClip cartelClip;
+    //public AnimationClip cartelClip;
     public bool activeMenu;
-    public void PlayGame()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);  
-    }
     private void Start()
     {
-        cartel = GameObject.Find("atlas_cartel").GetComponent<Animator>();
+        fadeSC = GameObject.Find("fundido").GetComponent<Fundido>();
+       
+        //playB = GameObject.Find("PlayButton").GetComponent<Button>();
         
-        cortDcha = GetComponent<Animator>();
+
+        //cartel = GameObject.Find("atlas_cartel").GetComponent<Animator>();
+
+
+
         //ActiveMenu();
+    }
+    public void PlayGame()
+    {
+        //fadeSC.FadeOut();
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);  
     }
     public void QuitGame()
     {
         Application.Quit();
     }
     
-    //public void ()
-    //{
-    //    menu = GetComponent<MainMenu>();
-    //    if ()
-    //    {
+    public void ActiveMenu()
+    {
+        //menu = GameObject.Find("MainMenu").GetComponentInChildren<>
+        
+        
 
-    //    }
-    //}
+    }
+    
 }
