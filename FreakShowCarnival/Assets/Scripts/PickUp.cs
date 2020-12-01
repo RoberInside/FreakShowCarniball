@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class PickUp : MonoBehaviour
 {
     public int value;
-    public Text ScoreText;
+
     // Start is called before the first frame update
 
 

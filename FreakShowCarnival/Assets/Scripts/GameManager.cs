@@ -7,10 +7,13 @@ public class GameManager : MonoBehaviour
 {
     public Text scoreText;
     public int puntuacion;
+    public GameObject newSeccion;
 
     public Transform seccionInicialTF;
     public GameObject[] contenedorObstaculosArray;
-   
+    public GameObject[] oldSeccion;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -26,20 +29,22 @@ public class GameManager : MonoBehaviour
     {
         
     }
-    void GameStart()
+    public void GameStart()
     {
-        puntuacion = 0;
+         
+        //puntuacion = 0;
         seccionInicialTF =GetComponent<Transform>(); //Creamos una seccion inicial y usamos su posicion como referencia.
         FindSeccion(); //Encuentra las secciones
     }
-    void FindSeccion()
+    public void FindSeccion()
     {
+        //contenedorObstaculosArray = null;
         contenedorObstaculosArray = GameObject.FindGameObjectsWithTag("Seccion"); // Busca todos los objetos con el tag seccion e introducelos en un array 
 
         ColocarSeccion();
         
     }
-    void ColocarSeccion()
+    public void ColocarSeccion()
     {
         float margen = 0.9f; //Margen de separación de secciones.
 
@@ -49,7 +54,8 @@ public class GameManager : MonoBehaviour
             int index = Random.Range(0, contenedorObstaculosArray.Length); //Creamos un random para seleccionar una seccion aleatoria dentro del array e implementarla en el mapa
             GameObject newSeccion = Instantiate(contenedorObstaculosArray[index]); //Instanciamos la seccion sleccionada mediante el random 
             newSeccion.transform.position = new Vector2(seccionInicialTF.position.x, seccionInicialTF.transform.position.y - margen);//Colocamos la instancia en la posición indicada + el margen.
-
+            newSeccion.transform.tag = "SeccionOld";
+            
             margen +=0.9f; //sumamos 0.9 al margen para que cada instancia se aleje mas de la seccion inicial.
             
             
@@ -57,8 +63,17 @@ public class GameManager : MonoBehaviour
         
 
     }
-   
+    public void DestroySecciones()
+    {
+        oldSeccion = GameObject.FindGameObjectsWithTag("SeccionOld");
+        for (int i = 0; i < oldSeccion.Length; i++)
+        {
 
+            Destroy(oldSeccion[i]);
+
+        }
+
+    }
     public void SetScoreText()
     {
         scoreText.text = "Score: " + puntuacion.ToString();

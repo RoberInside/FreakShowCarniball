@@ -10,8 +10,9 @@ public class BallController : MonoBehaviour
     public GameObject ballGO;
     public GameManager gameManagerSC;
     public Camera cam;
-
+    
     public bool gyroActive;
+    public bool newMapa;
     public Gyroscope m_Gyro;    
     // Start is called before the first frame update
     void Start()
@@ -57,8 +58,27 @@ public class BallController : MonoBehaviour
             gameManagerSC.puntuacion += other.gameObject.GetComponent<PickUp>().value;
             gameManagerSC.SetScoreText();
         }
+        if (other.CompareTag("Hole"))
+        {
+            
+           ballGO.transform.position = new Vector2(0, 3);
 
+
+
+           
+            
+            newMapa= true;
+            
+        }
+        if (newMapa==true)
+        {
+            gameManagerSC.DestroySecciones();
+            gameManagerSC.FindSeccion();
+            gameManagerSC.ColocarSeccion();
+
+        }
     }
+    
     public void EnableGyro()
     {
         if (SystemInfo.supportsGyroscope)                           //si el dispositivo soporta giroscopio

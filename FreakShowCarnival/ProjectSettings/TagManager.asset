@@ -7,6 +7,8 @@ TagManager:
   - Seccion
   - 300
   - PickUp
+  - Hole
+  - SeccionOld
   layers:
   - Default
   - TransparentFX
