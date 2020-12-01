@@ -1469,7 +1469,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1091153548
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2221,7 +2221,7 @@ Canvas:
   m_GameObject: {fileID: 1757158037}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 1
+  m_RenderMode: 2
   m_Camera: {fileID: 1416405707}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
@@ -2241,8 +2241,8 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1757158037}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 90}
+  m_LocalScale: {x: 0.00390625, y: 0.00390625, z: 0.00390625}
   m_Children:
   - {fileID: 2011516555}
   - {fileID: 2143485420}
@@ -2255,8 +2255,8 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0, y: 0}
+  m_SizeDelta: {x: 1440, y: 2560}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1813461321
 GameObject:
   m_ObjectHideFlags: 0
@@ -2342,17 +2342,6 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2143485421}
         m_MethodName: PlayGame
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1091153551}
-        m_MethodName: FadeOut
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2800,6 +2789,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2143485420}
   - component: {fileID: 2143485421}
+  - component: {fileID: 2143485422}
   m_Layer: 5
   m_Name: MainMenu
   m_TagString: Untagged
@@ -2826,7 +2816,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -709}
+  m_AnchoredPosition: {x: 0, y: -689}
   m_SizeDelta: {x: 1048.0432, y: 812.4282}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2143485421
@@ -2848,3 +2838,22 @@ MonoBehaviour:
   fadeSC: {fileID: 0}
   cartel: {fileID: 0}
   activeMenu: 0
+--- !u!95 &2143485422
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2143485419}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: bd272cf1b30648c458def6eb0ed876d4, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

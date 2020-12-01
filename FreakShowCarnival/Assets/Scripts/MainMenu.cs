@@ -18,9 +18,9 @@ public class MainMenu : MonoBehaviour
     public bool activeMenu;
     private void Start()
     {
-        fadeSC = GameObject.Find("fundido").GetComponent<Fundido>();
+        fadeSC = GameObject.Find("Fundido").GetComponent<Fundido>();
        
-        //playB = GameObject.Find("PlayButton").GetComponent<Button>();
+        
         
 
         //cartel = GameObject.Find("atlas_cartel").GetComponent<Animator>();
@@ -31,8 +31,8 @@ public class MainMenu : MonoBehaviour
     }
     public void PlayGame()
     {
-        //fadeSC.FadeOut();
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);  
+        fadeSC.FadeOut();   
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);  
     }
     public void QuitGame()
     {
