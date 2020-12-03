@@ -18,7 +18,6 @@ public class Fundido : MonoBehaviour
     public void FadeOut()
     {
         fundido.CrossFadeAlpha(1, 0.5f, false);
-        //fundido.CrossFadeAlpha(0, 1, false);
         
         StartCoroutine(ChangeScene());
     }

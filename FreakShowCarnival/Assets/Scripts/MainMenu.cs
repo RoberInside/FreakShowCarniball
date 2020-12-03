@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-using UnityEngine.Animations;
 
 public class MainMenu : MonoBehaviour
 {
@@ -13,38 +12,21 @@ public class MainMenu : MonoBehaviour
     public Button quitB;
 
     public Fundido fadeSC;
-    public Animator cartel;
-    //public AnimationClip cartelClip;
-    public bool activeMenu;
+    
     private void Start()
     {
         fadeSC = GameObject.Find("Fundido").GetComponent<Fundido>();
-       
-        
-        
-
-        //cartel = GameObject.Find("atlas_cartel").GetComponent<Animator>();
-
-
-
-        //ActiveMenu();
+            
     }
     public void PlayGame()
     {
         fadeSC.FadeOut();   
-        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);  
+         
     }
     public void QuitGame()
     {
         Application.Quit();
     }
     
-    public void ActiveMenu()
-    {
-        //menu = GameObject.Find("MainMenu").GetComponentInChildren<>
-        
-        
-
-    }
     
 }
