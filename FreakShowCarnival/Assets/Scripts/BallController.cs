@@ -76,7 +76,12 @@ public class BallController : MonoBehaviour
             gameManagerSC.FindSeccion();
             gameManagerSC.ColocarSeccion();
 
+
         }*/
+        
+            newMapa = false;
+        
+
     }
     
     public void EnableGyro()

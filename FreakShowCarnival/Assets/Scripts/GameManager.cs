@@ -25,14 +25,16 @@ public class GameManager : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
     public void GameStart()
     {
+
         
         //puntuacion = 0;
+
+         
+       
+
         seccionInicialTF =GetComponent<Transform>(); //Creamos una seccion inicial y usamos su posicion como referencia.
         FindSeccion(); //Encuentra las secciones
     }
