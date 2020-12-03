@@ -58,7 +58,7 @@ public class BallController : MonoBehaviour
             gameManagerSC.puntuacion += other.gameObject.GetComponent<PickUp>().value;
             gameManagerSC.SetScoreText();
         }
-        if (other.CompareTag("Hole"))
+        /*if (other.CompareTag("Hole"))
         {
             
            ballGO.transform.position = new Vector2(0, 3);
@@ -76,7 +76,7 @@ public class BallController : MonoBehaviour
             gameManagerSC.FindSeccion();
             gameManagerSC.ColocarSeccion();
 
-        }
+        }*/
     }
     
     public void EnableGyro()

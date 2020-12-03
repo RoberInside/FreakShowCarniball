@@ -19,7 +19,7 @@ public class GameManager : MonoBehaviour
     {
         
         scoreText = GameObject.Find("ScoreText").GetComponent<Text>();
-        
+       
         SetScoreText();
         GameStart();
     }
@@ -31,14 +31,14 @@ public class GameManager : MonoBehaviour
     }
     public void GameStart()
     {
-         
+        
         //puntuacion = 0;
         seccionInicialTF =GetComponent<Transform>(); //Creamos una seccion inicial y usamos su posicion como referencia.
         FindSeccion(); //Encuentra las secciones
     }
     public void FindSeccion()
     {
-        //contenedorObstaculosArray = null;
+        contenedorObstaculosArray = null;
         contenedorObstaculosArray = GameObject.FindGameObjectsWithTag("Seccion"); // Busca todos los objetos con el tag seccion e introducelos en un array 
 
         ColocarSeccion();
@@ -56,8 +56,9 @@ public class GameManager : MonoBehaviour
             newSeccion.transform.position = new Vector2(seccionInicialTF.position.x, seccionInicialTF.transform.position.y - margen);//Colocamos la instancia en la posición indicada + el margen.
             newSeccion.transform.tag = "SeccionOld";
             
+
             margen +=0.9f; //sumamos 0.9 al margen para que cada instancia se aleje mas de la seccion inicial.
-            
+
             
         }
         
@@ -72,7 +73,10 @@ public class GameManager : MonoBehaviour
             Destroy(oldSeccion[i]);
 
         }
-
+        oldSeccion = null;
+        contenedorObstaculosArray = null;
+        FindSeccion();
+        
     }
     public void SetScoreText()
     {

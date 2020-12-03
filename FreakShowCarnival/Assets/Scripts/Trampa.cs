@@ -15,9 +15,9 @@ public class Trampa : MonoBehaviour
     {
         
     }
-    private void OnTriggerEnter2D(Collider2D other)
+     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.name == "Atlas_pelota")
+        if (other.gameObject.name == "Pelota")
         {
             Destroy(gameObject);
         }
