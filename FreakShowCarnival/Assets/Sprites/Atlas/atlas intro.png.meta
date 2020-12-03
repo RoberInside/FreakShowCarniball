@@ -111,10 +111,10 @@ TextureImporter:
       name: atlas_cartel
       rect:
         serializedVersion: 2
-        x: 594
-        y: 760
-        width: 863
-        height: 600
+        x: 609
+        y: 768
+        width: 832
+        height: 583
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -132,10 +132,10 @@ TextureImporter:
       name: atlas_cortina_izda
       rect:
         serializedVersion: 2
-        x: 35
-        y: 61
+        x: 53
+        y: 60
         width: 548
-        height: 1930
+        height: 1929
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -153,10 +153,10 @@ TextureImporter:
       name: atlas_cortina_dcha
       rect:
         serializedVersion: 2
-        x: 1465
-        y: 61
-        width: 546
-        height: 1928
+        x: 1447
+        y: 55
+        width: 548
+        height: 1932
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
