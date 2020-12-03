@@ -9,6 +9,7 @@ TagManager:
   - PickUp
   - Hole
   - SeccionOld
+  - agujeroGameOver
   layers:
   - Default
   - TransparentFX

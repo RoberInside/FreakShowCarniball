@@ -58,26 +58,6 @@ public class BallController : MonoBehaviour
             gameManagerSC.puntuacion += other.gameObject.GetComponent<PickUp>().value;
             gameManagerSC.SetScoreText();
         }
-        /*if (other.CompareTag("Hole"))
-        {
-            
-           ballGO.transform.position = new Vector2(0, 3);
-
-
-
-           
-            
-            newMapa= true;
-            
-        }
-        if (newMapa==true)
-        {
-            gameManagerSC.DestroySecciones();
-            gameManagerSC.FindSeccion();
-            gameManagerSC.ColocarSeccion();
-
-
-        }*/
         
             newMapa = false;
         
