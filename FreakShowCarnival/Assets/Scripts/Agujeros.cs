@@ -28,12 +28,7 @@ public class Agujeros : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (this.gameObject.CompareTag("agujeroGameOver")&& other.gameObject.name=="Pelota")
-        {
-            panelGameObject.SetActive(true);
-            ballGO.SetActive(false);
-            StartCoroutine(ChangeScene());
-        }
+       
   
         if (other.gameObject.name == "Pelota")
         {
@@ -54,12 +49,5 @@ public class Agujeros : MonoBehaviour
 
        
     }
-    IEnumerator ChangeScene()
-    {
-        yield return new WaitForSeconds(3);
-
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
-        SceneManager.UnloadScene(1);
-        
-    }
+    
 }
