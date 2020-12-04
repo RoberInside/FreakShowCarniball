@@ -6,14 +6,15 @@ using UnityEngine.UI;
 
 public class MainMenu : MonoBehaviour
 {
-    public MainMenu menu;
-   
+    
+    public AudioManager audioManagerSC;
     public Fundido fadeSC;
     
     private void Start()
     {
-        fadeSC = GameObject.Find("Fundido").GetComponent<Fundido>();
-            
+        audioManagerSC = FindObjectOfType<AudioManager>();
+        fadeSC = GameObject.Find("Fundido").GetComponent<Fundido>();            
+        audioManagerSC.PlayGameMusic();
     }
     public void PlayGame()
     {

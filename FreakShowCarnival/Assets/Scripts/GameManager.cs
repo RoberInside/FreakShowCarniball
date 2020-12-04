@@ -8,18 +8,18 @@ public class GameManager : MonoBehaviour
     public Text scoreText;
     public int puntuacion;
     public GameObject newSeccion;
+    public GameManager gm;
 
     public Transform seccionInicialTF;
     public GameObject[] contenedorObstaculosArray;
     public GameObject[] oldSeccion;
-
-
+    public AudioManager audioManagerSC;
+   
     // Start is called before the first frame update
     void Start()
     {
-        
         scoreText = GameObject.Find("ScoreText").GetComponent<Text>();
-       
+
         SetScoreText();
         GameStart();
     }
@@ -28,15 +28,14 @@ public class GameManager : MonoBehaviour
     
     public void GameStart()
     {
-
-        
-        //puntuacion = 0;
-
-         
-       
-
+        audioManagerSC = FindObjectOfType<AudioManager>();
         seccionInicialTF =GetComponent<Transform>(); //Creamos una seccion inicial y usamos su posicion como referencia.
         FindSeccion(); //Encuentra las secciones
+        
+        
+            audioManagerSC.PlayGameMusic();
+        
+
     }
     public void FindSeccion()
     {

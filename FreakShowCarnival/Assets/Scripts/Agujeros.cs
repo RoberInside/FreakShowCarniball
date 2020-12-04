@@ -8,6 +8,7 @@ public class Agujeros : MonoBehaviour
     public GameObject panelGameObject;
     public GameObject ballGO;
     public bool newMapa;
+    public AudioManager audioManagerSC;
 
     public GameManager gameManagerSC;
     
@@ -18,6 +19,7 @@ public class Agujeros : MonoBehaviour
         panelGameObject.SetActive(false);
         ballGO = GameObject.Find("Pelota");
         gameManagerSC = FindObjectOfType<GameManager>();
+        audioManagerSC = FindObjectOfType<AudioManager>();
     }
 
     // Update is called once per frame
@@ -32,7 +34,7 @@ public class Agujeros : MonoBehaviour
   
         if (other.gameObject.name == "Pelota")
         {
-
+            audioManagerSC.PlayBlackHole();
             ballGO.transform.position = new Vector2(0, 3);
             
 

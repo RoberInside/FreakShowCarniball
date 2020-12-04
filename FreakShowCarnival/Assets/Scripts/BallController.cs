@@ -10,6 +10,7 @@ public class BallController : MonoBehaviour
     public GameObject ballGO;
     public GameManager gameManagerSC;
     public Camera cam;
+    public AudioManager aMSC;
     
     public bool gyroActive;
     public bool newMapa;
@@ -18,6 +19,7 @@ public class BallController : MonoBehaviour
     void Start()
     {
         Input.backButtonLeavesApp = true;
+        aMSC = FindObjectOfType<AudioManager>();
         gameManagerSC = FindObjectOfType<GameManager>();
         ballRb = GetComponent<Rigidbody2D>();
         ballGO = GameObject.Find("Pelota");
@@ -54,6 +56,7 @@ public class BallController : MonoBehaviour
     {
         if (other.CompareTag("PickUp"))
         {
+            aMSC.PlayPickUp();
             other.gameObject.SetActive(false);
             gameManagerSC.puntuacion += other.gameObject.GetComponent<PickUp>().value;
             gameManagerSC.SetScoreText();
