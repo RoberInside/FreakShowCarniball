@@ -7,10 +7,7 @@ using UnityEngine.UI;
 public class MainMenu : MonoBehaviour
 {
     public MainMenu menu;
-    public Button playB;
-    public Button optionsB;
-    public Button quitB;
-
+   
     public Fundido fadeSC;
     
     private void Start()
