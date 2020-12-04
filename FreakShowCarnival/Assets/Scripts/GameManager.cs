@@ -33,7 +33,7 @@ public class GameManager : MonoBehaviour
         FindSeccion(); //Encuentra las secciones
         
         
-            audioManagerSC.PlayGameMusic();
+        audioManagerSC.PlayGameMusic();
         
 
     }

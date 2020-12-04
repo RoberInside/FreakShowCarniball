@@ -4,13 +4,9 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
-    //public AudioSource gameMusic;
-    //public AudioSource blackHoleAS;
-    //public AudioSource pickUpAS;
     public AudioSource audioS;
-    public AudioSource audioSBM;
-    public AudioClip[] sonidos;
-    public int activeMusic;
+    public AudioSource audioSBM; //creamos una variable para la musica del juego
+    public AudioClip[] sonidos; // creamos un array donde vamos a almacenar los efectos de sonido del juego
 
     //public static AudioManager _instance;
 
@@ -27,24 +23,23 @@ public class AudioManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        audioS = GetComponent<AudioSource>();
-        audioSBM = GameObject.Find("Main Camera").GetComponent<AudioSource>();
-                         
+        audioS = GetComponent<AudioSource>(); //accedemos al componente de audiosource del audiomanager para darle valor luego al array
+        audioSBM = GameObject.Find("Main Camera").GetComponent<AudioSource>(); //accedemos a la musica del juego, que esta en la cámara
+      
     }
-
-    public void PlayGameMusic()
+    public void PlayGameMusic() //creamos un metodo para que se reproduzca la musica del juego
     {
         audioSBM.playOnAwake = true;
         audioSBM.volume = 0.3f;
         audioSBM.Play();
     }
 
-    public void StopGameMusic()
-    {
-        audioSBM.Stop();
-    }
+    //public void StopGameMusic()
+    //{
+    //    audioSBM.Stop();
+    //}
 
-    public void PlayBlackHole()
+    public void PlayBlackHole() //creamos un metodo para que se reproduzca el sonido del agujero negro, y le asignamos un valor en el array
     {
 
         audioS.loop = false;
@@ -53,7 +48,7 @@ public class AudioManager : MonoBehaviour
         audioS.Play();
     }
 
-    public void PlayPickUp()
+    public void PlayPickUp() //creamos un metodo para que se reproduzca el sonido del pick up, y le asignamos un valor en el array
     {
         audioS.loop = false;
         audioS.clip = sonidos[1];
@@ -61,7 +56,7 @@ public class AudioManager : MonoBehaviour
         audioS.Play();
     }
 
-    public void PlayRisaGameOver()
+    public void PlayRisaGameOver() //creamos un metodo para que se reproduzca el sonido de risa cuando caes en el agujero que te mata y te salta el game over, y le asignamos un valor en el array
     {
         audioS.loop = false;
         audioS.clip = sonidos[2];
