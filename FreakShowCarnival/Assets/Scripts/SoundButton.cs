@@ -16,13 +16,16 @@ public class SoundButton : MonoBehaviour
     }
     public void ChangeImage()
     {
+        activeSound = AudioListener.pause;
         if (!activeSound)
         {
+            Debug.Log("Me desactivo");
             bttn.image.overrideSprite = offbttn;
             activeSound = true;
         }
         else
         {
+            Debug.Log("Me activo");
             bttn.image.overrideSprite = onbttn;
             activeSound = false;
         }

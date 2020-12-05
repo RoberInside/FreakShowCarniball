@@ -17,7 +17,7 @@ public class Creditos : MonoBehaviour
 
     IEnumerator ChangeSceneCreditos()
     {
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(0.5f);
         SceneManager.LoadScene("Creditos");
     }
     public void VolverMenu()
@@ -26,7 +26,7 @@ public class Creditos : MonoBehaviour
     }
     IEnumerator ChangeSceneMenu()
     {
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(0.5f);
         SceneManager.LoadScene("Menu");
     }
 }
