@@ -1,5 +1,9 @@
 sceneSetups:
-- path: Assets/Scenes/Game.unity
+<<<<<<< HEAD
+- path: Assets/Scenes/Creditos.unity
+=======
+- path: Assets/Scenes/Menu.unity
+>>>>>>> 5f10ae0e5d34dede2b10d8e1efe9c81ef18bf673
   isLoaded: 1
   isActive: 1
   isSubScene: 0

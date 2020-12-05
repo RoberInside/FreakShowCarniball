@@ -7,6 +7,7 @@ public class AgujerosGameOver : MonoBehaviour
 {
     public Agujeros agujerosSC;
     public AudioManager audioManagerSC;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -27,8 +28,9 @@ public class AgujerosGameOver : MonoBehaviour
     }
     IEnumerator ChangeScene()                                                   //corrutina que hace que cambie de escena
     {
-        yield return new WaitForSeconds(2);
 
+        yield return new WaitForSeconds(2);
+        AudioListener.pause = false;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
         SceneManager.UnloadScene(1);
     }
