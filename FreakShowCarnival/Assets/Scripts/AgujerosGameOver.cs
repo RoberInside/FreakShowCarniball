@@ -7,19 +7,15 @@ public class AgujerosGameOver : MonoBehaviour
 {
     public Agujeros agujerosSC;
     public AudioManager audioManagerSC;
+
     // Start is called before the first frame update
     void Start()
     {
+        //encuentra los componentes en la escena
         agujerosSC = FindObjectOfType<Agujeros>();
         audioManagerSC = FindObjectOfType<AudioManager>();
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-    void OnTriggerEnter2D(Collider2D other)
+    void OnTriggerEnter2D(Collider2D other)                 //trigguer que hace perder el juego y cambia al menu principal
     {
         if (other.gameObject.name == "Pelota")
         {
@@ -28,16 +24,12 @@ public class AgujerosGameOver : MonoBehaviour
             agujerosSC.ballGO.SetActive(false);
             StartCoroutine(ChangeScene());
         }
-
-        
-
     }
-    IEnumerator ChangeScene()
+    IEnumerator ChangeScene()                                                   //corrutina que hace que cambie de escena
     {
         yield return new WaitForSeconds(2);
 
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
         SceneManager.UnloadScene(1);
-
     }
 }

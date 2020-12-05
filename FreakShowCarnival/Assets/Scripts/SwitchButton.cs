@@ -8,7 +8,7 @@ public class SwitchButton : MonoBehaviour
 {
     public int switchState = 1;
     public GameObject switchBttn;
-    public AudioSource audioManagerAS;
+    public AudioSource audioManagerAS;                                                  
     public AudioManager audioManagerSC;
     
 

@@ -5,16 +5,6 @@ using UnityEngine.UI;
 
 public class PickUp : MonoBehaviour
 {
-    public int value;
+    public int value;       //valor de cada valor pickup en el editor
 
-    // Start is called before the first frame update
-
-
-
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
 }

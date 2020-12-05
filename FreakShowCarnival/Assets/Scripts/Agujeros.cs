@@ -5,50 +5,43 @@ using UnityEngine.SceneManagement;
 
 public class Agujeros : MonoBehaviour
 {
-    public GameObject panelGameObject;
-    public GameObject ballGO;
-    public bool newMapa;
-    public AudioManager audioManagerSC;
+    /*Script que reinicia el nivel para ganar puntos
+     */
+    public bool newMapa;                                                    //control de la destruccion del mapa                              
 
+    public GameObject panelGameObject;                                      //panel del canvas del gameover
+    public GameObject ballGO;
     public GameManager gameManagerSC;
+
+    public AudioManager audioManagerSC;
     
     // Start is called before the first frame update
     void Start()
     {
+        //encuentra los componentes u objetos en la escena
+        ballGO = GameObject.Find("Pelota");
         panelGameObject = GameObject.Find("PanelGameOver");
         panelGameObject.SetActive(false);
-        ballGO = GameObject.Find("Pelota");
         gameManagerSC = FindObjectOfType<GameManager>();
         audioManagerSC = FindObjectOfType<AudioManager>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
+   
     void OnTriggerEnter2D(Collider2D other)
-    {
-       
-  
-        if (other.gameObject.name == "Pelota")
+    { 
+        if (other.gameObject.name == "Pelota")                      //si la pelota toca el agujero 
         {
-            audioManagerSC.PlayBlackHole();
-            ballGO.transform.position = new Vector2(0, 3);
-            
+            audioManagerSC.PlayBlackHole();                         //sonido
+            ballGO.transform.position = new Vector2(0, 3);          //la pelota vuelve arriba para reiniciar el nivel
 
-            newMapa = true;
-
+            newMapa = true;                                         //habilita la llamada de DestroySecciones() en el GameManager
         }
         
-        if (newMapa == true)
-        {
-
+        if (newMapa == true)                                        //destruye las secciones y se vuelve al bucle de creacion       
+        {   
             gameManagerSC.DestroySecciones();
-            newMapa = false;
+            newMapa = false;                                        //false hasta que se vuelva a tocar el agujero
         }
-
        
     }
     

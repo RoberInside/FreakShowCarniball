@@ -6,8 +6,9 @@ using UnityEngine.SceneManagement;
 
 public class Fundido : MonoBehaviour
 {
-    public Image fundido;
-   
+    /* Script de las transiciones  entre escenas
+     * */
+    public Image fundido;   
     // Start is called before the first frame update
     void Start()
     {
@@ -17,8 +18,7 @@ public class Fundido : MonoBehaviour
 
     public void FadeOut()
     {
-        fundido.CrossFadeAlpha(1, 0.5f, false);
-        
+        fundido.CrossFadeAlpha(1, 0.5f, false);        
         StartCoroutine(ChangeScene());
     }
 

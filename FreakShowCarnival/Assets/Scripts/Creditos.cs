@@ -6,20 +6,13 @@ using UnityEngine.SceneManagement;
 
 public class Creditos : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    /*
+     * Script que hace cambiar a la escena que reproduce los creditos con corrutinas para que haya un delay entre el cambio mediante el click del 
+     * boton creditos del editor
+     */
     public void IrCreditos()
     {
         StartCoroutine(ChangeSceneCreditos());
-
     }
 
     IEnumerator ChangeSceneCreditos()
@@ -30,9 +23,7 @@ public class Creditos : MonoBehaviour
     public void VolverMenu()
     {
          StartCoroutine(ChangeSceneMenu());
-
     }
-
     IEnumerator ChangeSceneMenu()
     {
         yield return new WaitForSeconds(1);
