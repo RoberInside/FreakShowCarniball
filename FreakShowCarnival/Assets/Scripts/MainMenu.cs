@@ -12,17 +12,17 @@ public class MainMenu : MonoBehaviour
     
     private void Start()
     {
-        fadeSC = GameObject.Find("Fundido").GetComponent<Fundido>();            
-        audioManagerSC = FindObjectOfType<AudioManager>();
-        audioManagerSC.PlayGameMusic();
+        fadeSC = GameObject.Find("Fundido").GetComponent<Fundido>(); //accedemos al script del fundido           
+        audioManagerSC = FindObjectOfType<AudioManager>(); //accedemos a la musica del juego 
+        audioManagerSC.PlayGameMusic(); 
     }
     public void PlayGame()
     {
-        fadeSC.FadeOut();       
+        fadeSC.FadeOut();   //llamamos al metodo del script fundido que es el que nos cambia de escena    
     }
     public void QuitGame()
     {
-        Application.Quit();
+        Application.Quit(); //esta linea nos echa del juego
     }
     
     
