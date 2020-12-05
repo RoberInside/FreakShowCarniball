@@ -42,7 +42,7 @@ public class BallController : MonoBehaviour
         if (gyroActive)                                              //girsocopio si existe  
         {
             movement = new Vector2(g.rotationRate.z ,0.0f );        //la direccion en la que se mueve en la escena dada por la orientacion del giroscopio
-            impulso = g.gravity.y;                                   //se toma la gravedad del giroscopio como la magnitud del impulso de la pelota
+            impulso = -speed;                                   //se toma la gravedad del giroscopio como la magnitud del impulso de la pelota
         }
         else                                                        //pruebas de nivel con teclado
         {
