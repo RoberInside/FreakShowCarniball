@@ -26,6 +26,6 @@ public class Fundido : MonoBehaviour
     IEnumerator ChangeScene()
     {
         yield return new WaitForSeconds(1);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene("Game");
     }
 }
