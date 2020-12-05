@@ -11,7 +11,8 @@ public class SwitchButton : MonoBehaviour
     public AudioSource audioManagerAS;
     //public AudioManager audioManagerSC;
     public MuteButton muteSC;
-    
+
+
 
     private void Start()
     {
@@ -26,17 +27,21 @@ public class SwitchButton : MonoBehaviour
         switchState = Math.Sign(-switchBttn.transform.localPosition.x);
         Debug.Log("bttn state: " + switchState);
         
+        
 
-        if (switchState > 0)
+        
+        
+
+        if (switchState < 0)
         {
-            muteSC.MutedPressed(); //si el boton está en 1 (posición dcha) se mutea el sonido
+            audioManagerAS.Play(); 
+            muteSC.MutedPressed(); //si el boton está en -1 (posición izda) se mantiene el sonido
             
         }
 
-        else if (switchState < 0 )
+        else if (switchState > 0 )
         {          
-            audioManagerAS.Play(); //si el boton está en -1 (posición izda) el sonido se mantiene/reanuda
-            muteSC.MutedPressed();
+            muteSC.MutedPressed(); //si el boton está en 1 (posición dcha) el sonido se mutea
 
         }
     }
