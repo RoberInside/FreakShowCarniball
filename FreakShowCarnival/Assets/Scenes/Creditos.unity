@@ -3246,7 +3246,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 0.5
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -5009,13 +5009,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
+  gyroActive: 1
   ballRb: {fileID: 0}
   ballGO: {fileID: 0}
   gameManagerSC: {fileID: 0}
   cam: {fileID: 0}
   aMSC: {fileID: 0}
-  gyroActive: 1
-  newMapa: 0
 --- !u!1 &900114235
 GameObject:
   m_ObjectHideFlags: 0
